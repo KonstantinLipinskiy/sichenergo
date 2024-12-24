@@ -6,11 +6,7 @@ from django.shortcuts import render
 
 def index(request):
 	context = {
-		"title": "Home", 
-		"content": "Главная страница - Сич Энерго",
-		'list': ['first', 'second'],
-		'dict': {'first': 1},
-		'is_authenticated': False
+		"title": "Головна", 
 		}
 
 	return render(request, "main/index.html", context)

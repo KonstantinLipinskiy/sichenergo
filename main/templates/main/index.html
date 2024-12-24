@@ -1,15 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{title}}</title>
-</head>
+{% extends "main/base.html" %}
+
+{% load static %}
+
+{% block css %}
+	<link rel="stylesheet" href="{% static "deps/css/style.css" %}">
+{% endblock css %}
+{% block title %}
+	{{context}}
+{% endblock title %}
+
+
 <body>
-	<p>{{content}}</p>
-	{% if is_authenticated %}
-		<p>{{list.0}}</p>
-		<p>{{dict.first}}</p>
-	{% endif %}
+	<div class="wrapper">
+		<div class="content">
+			{% block nav %}
+			<nav>
+				<ul class="menu">
+					<li><a href="#">Компанія</a>
+							<ul>
+								<li><a href="company/about.html">Про нас</a></li>
+								<li><a href="company/documents.html">Документи</a></li>
+								<li><a href="company/reviews.html">Відгуки</a></li>
+								<!-- <li><a href="company/media.html">ЗМІ</a></li> -->
+							</ul>
+					</li>
+					<li><a href="#">Продукція</a>
+							<ul>
+								<li><a href="goods/transformers.html">Трансформатори</a></li>
+								<li><a href="goods/ktp.html">КТП</a></li>
+							</ul>
+					</li>
+					<li><a href="services/services.html">Послуги</a></li>
+					<li><a href="news/news.html">Новини</a></li>
+					<li><a href="contacts/contacts.html">Контакти</a></li>
+					<li><a href="entrance/entrance.html">Вхід</a></li>
+				</ul>
+			</nav>
+			{% endblock nav %}
+
+
+			{% block main %}
+				<main class="main">
+					<div class="container">
+						<div class="main__row">
+							<div class="main__inform">
+								<div class="main__inform-title">Останні події</div>
+								<div class="main__inform-body">
+									<div class="main__inform-image">
+										<img class="main__inform-image" src="{% static "deps/img/new for index/tmg_tmg.png" %}" alt="Зображення">
+									</div>
+									<div class="main__inform-text">
+										<div class="main__inform-text-title">
+											Наша компанія розробила та запустила власний сайт!
+										</div>
+										<div class="main__inform-text-text">
+											<p>🌐🎉 Раді повідомити, що компанія ТОВ ВТК "Січ Енерго" розробила та запустила власний сайт! Тепер ви зможете швидко та зручно отримати всю інформацію про нашу продукцію, послуги та останні новини прямо на нашому ресурсі.</p>
+											<p>Ми створили сайт для того, щоб зробити співпрацю з нами ще більш доступною та прозорою. Кожен наш клієнт зможе легко знайти потрібні рішення та отримати консультації від наших фахівців.</p>
+											<p>Запрошуємо вас відвідати наш новий сайт і залишити свої відгуки! Разом робимо кроки до енергонезалежності України. 💼⚡</p>
+										</div>
+										<div class="main__inform-text-deital">
+											<p>Детальніше</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="main__content">
+								<h1>Обери свою продукцію</h1>
+								<div class="main__content-index-items">
+									<a class="index-link" href="goods/transformers.html">
+										<div class="main__content-index-item">
+											<div class="main__content-index-video">
+												<video autoplay muted loop playsinlin src="{% static "deps/video/main_index_transvormator.mp4" %}">Трансформатори</video>
+											</div>
+											<div class="main__content-index-title">Трансформатори</div>
+										</div>
+									</a>
+									<a class="index-link" href="goods/ktp.html">
+										<div class="main__content-index-item">
+											<div class="main__content-index-video">
+												<video autoplay muted loop playsinlin src="{% static "deps/video/main_index_ktp.mp4" %}">КТП</video>
+											</div>
+											<div class="main__content-index-title">Трансформаторні підстанції</div>
+										</div>
+									</a>
+									<a class="index-link" href="services/services.html">
+										<div class="main__content-index-item">
+											<div class="main__content-index-video">
+												<video autoplay muted loop playsinlin src="{% static "deps/video/main_index_poslugi.mp4" %}">Послугии</video>
+											</div>
+											<div class="main__content-index-title">Послуги</div>
+										</div>
+									</a>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+
+				<!-- Модальное окно -->
+
+				<div class="modal">
+					<div class="modal-content">
+						<span class="modal-close">&times;</span>
+						<img src="" alt="">
+						<div class="modal-text"></div>
+					</div>
+				</div>
+
+				<script>
+					function toggleMenu() {
+						const menu = document.querySelector('.menu');
+						menu.classList.toggle('active');
+					}
+				</script>
+				<script src="{% static "deps/js/news-index.js" %}"></script>
+			{% endblock main %}
+		</div>
+	</div>
 </body>
 </html>

@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% block css %}{% endblock css %}
+	<title>{{title}}</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="content">
+			<div class="header">
+				<div class="container">
+					<div class="navbar">
+						<a href="{% url "main:index" %}">
+							 <img src="{% static "deps/img/logo/logo_SichEnergo.jpg" %}" alt="">
+						</a>
+						<div class="burger" onclick="toggleMenu()">
+							 <span></span>
+							 <span></span>
+							 <span></span>
+						</div>
+						{% block nav %}{% endblock nav %}
+				  </div>
+				</div>
+			</div>
+			{% block main %}{% endblock main %}
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<p>Запоріжжя</p>
+				<p>2024</p>
+			</div>
+		</footer>
+
+</body>
+</html>
