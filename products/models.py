@@ -1,0 +1,16 @@
+from django.db import models
+from tabnanny import verbose
+
+class TransformItem(models.Model):
+	name = models.CharField(max_length=255, verbose_name='Серія')
+	image = models.ImageField(upload_to='media/', verbose_name='Зображення')
+	detail_url = models.URLField(blank=True, null=True, verbose_name='Посилання')
+
+	def __str__(self):
+		return self.name
+	
+	class Meta:
+		db_table= 'transform'
+		verbose_name = 'Серію'
+		verbose_name_plural = 'Серія трансформатора'
+

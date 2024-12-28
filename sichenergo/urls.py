@@ -15,9 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+from argparse import Namespace
 from django.contrib import admin
 from django.urls import path, include
 
+import products
 from sichenergo import settings
 from django.conf.urls.static import static
 # from django.conf import settings
@@ -25,7 +27,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
 	 path('', include('main.urls', namespace='main')),
-	 path('news/', include('news.urls', namespace='news'))
+	 path('news/', include('news.urls', namespace='news')),
+	 path('products/', include('products.urls', namespace='products'))
 ]
 
 if settings.DEBUG:
