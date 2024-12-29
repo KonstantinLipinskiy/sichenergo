@@ -1,3 +1,4 @@
+from pyexpat import model
 from django.db import models
 from tabnanny import verbose
 
@@ -27,3 +28,14 @@ class InformTransform(models.Model):
 		verbose_name = "Опитувальний лист"
 		verbose_name_plural = "Опитувальні листи"
 	
+class TransformTm(models.Model):
+	name = models.CharField(max_length=255, verbose_name='Потужність трансформаторів ТМ та ТМЖ')
+	image = models.ImageField(upload_to='img_tm/', verbose_name='Креслення трансформаторів ТМ та ТМЖ')
+	file_tm = models.FileField(upload_to='drawing_tm/', verbose_name='Скачати креслення трансформаторів ТМ та ТМЖ')
+
+	def __str__(self):
+		return self.name
+	
+	class Meta:
+		verbose_name = "Трансформатор ТМ та ТМЖ"
+		verbose_name_plural = "Трансформатори ТМ та ТМЖ"

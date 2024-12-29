@@ -9,4 +9,8 @@ class TransformItemAdmin(admin.ModelAdmin):
 class InformTransformAdmin(admin.ModelAdmin):
 	list_display = ('title', 'video', 'description', 'file_ol')
 
+@admin.register(TransformTm)
+class TransformTmAdmin(admin.ModelAdmin):
+	list_display = ('name', 'image', 'file_tm')
+
 

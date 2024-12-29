@@ -8,4 +8,5 @@ app_name='products'
 urlpatterns = [
 	path('', views.products, name='products'),
 	path('transformers/', views.transformers, name='transformers'),
+	path('transformers/tm/', views.transformers_tm, name='tm'),
 	]
