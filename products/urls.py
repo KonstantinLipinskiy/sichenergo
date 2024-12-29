@@ -6,6 +6,6 @@ from products import views
 app_name='products'
 
 urlpatterns = [
-	 path('', views.products, name='products'),
-	 path('transformers/', views.transformers, name='transformers')
+	path('', views.products, name='products'),
+	path('transformers/', views.transformers, name='transformers'),
 	]

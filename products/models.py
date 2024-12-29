@@ -14,3 +14,16 @@ class TransformItem(models.Model):
 		verbose_name = 'Серію'
 		verbose_name_plural = 'Серія трансформатора'
 
+class InformTransform(models.Model):
+	title = models.CharField(max_length=150, verbose_name='Опитовий лист')
+	video = models.FileField(upload_to='video/', verbose_name="Відео", blank=True, null=True)
+	description = models.TextField(verbose_name='Опис', blank=True)
+	file_ol = models.FileField(upload_to='ol/', verbose_name="Файл для скачування")
+
+	def __str__(self):
+		return self.title
+	
+	class Meta:
+		verbose_name = "Опитувальний лист"
+		verbose_name_plural = "Опитувальні листи"
+	
