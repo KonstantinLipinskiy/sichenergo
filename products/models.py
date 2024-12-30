@@ -16,7 +16,7 @@ class TransformItem(models.Model):
 		verbose_name_plural = 'Серія трансформатора'
 
 class InformTransform(models.Model):
-	title = models.CharField(max_length=150, verbose_name='Опитовий лист')
+	title = models.CharField(max_length=150, verbose_name='Трансформатор (опитовий лист)')
 	video = models.FileField(upload_to='video/', verbose_name="Відео", blank=True, null=True)
 	description = models.TextField(verbose_name='Опис', blank=True)
 	file_ol = models.FileField(upload_to='ol/', verbose_name="Файл для скачування")
@@ -77,7 +77,7 @@ class TransformYZ(models.Model):
 		verbose_name_plural = "Трансформатори Y/Z"
 
 class InformKTP(models.Model):
-	title = models.CharField(max_length=150, verbose_name='Опитовий лист')
+	title = models.CharField(max_length=150, verbose_name='КТП (опитовий лист)')
 	video = models.FileField(upload_to='video/', verbose_name="Відео", blank=True, null=True)
 	description = models.TextField(verbose_name='Опис', blank=True)
 	file_ol = models.FileField(upload_to='ol/', verbose_name="Файл для скачування")

@@ -25,4 +25,8 @@ class TransformTmzAdmin(admin.ModelAdmin):
 class TransformYZAdmin(admin.ModelAdmin):
 	list_display = ('name', 'image', 'file_yz')
 
+@admin.register(InformKTP)
+class InformKTPAdmin(admin.ModelAdmin):
+	list_display = ('title', 'video', 'description', 'file_ol')
+
 
