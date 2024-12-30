@@ -13,4 +13,16 @@ class InformTransformAdmin(admin.ModelAdmin):
 class TransformTmAdmin(admin.ModelAdmin):
 	list_display = ('name', 'image', 'file_tm')
 
+@admin.register(TransformTmg)
+class TransformTmgAdmin(admin.ModelAdmin):
+	list_display = ('name', 'image', 'file_tmg')
+
+@admin.register(TransformTmz)
+class TransformTmzAdmin(admin.ModelAdmin):
+	list_display = ('name', 'image', 'file_tmz')
+
+@admin.register(TransformYZ)
+class TransformYZAdmin(admin.ModelAdmin):
+	list_display = ('name', 'image', 'file_yz')
+
 
