@@ -1,6 +1,5 @@
-from pyexpat import model
 from django.db import models
-from tabnanny import verbose
+
 
 class TransformItem(models.Model):
 	name = models.CharField(max_length=255, verbose_name='Серія')
