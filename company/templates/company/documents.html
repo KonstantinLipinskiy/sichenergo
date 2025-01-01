@@ -1,108 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../css/company/documents.css">
-	<title>Документи</title>
-</head>
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block css %}
+	<link rel="stylesheet" href="{% static "deps/css/company/documents.css" %}">
+{% endblock %}
+	<title>{{context}}</title>
 <body>
-	<div class="wrapper">
-		<div class="content">
-			<div class="header">
-				<div class="container">
-					<div class="navbar">
-						<a href="../index.html">
-							 <img src="../img/logo/logo_SichEnergo.jpg" alt="">
-						</a>
-						<div class="burger" onclick="toggleMenu()">
-							 <span></span>
-							 <span></span>
-							 <span></span>
+	{% block main %}
+		<main class="main">
+			<div class="container">
+				<div class="main__row">
+				<div class="main__inform">
+					<div class="main__inform-title">{{inform.title}}</div>
+					<div class="main__inform-body">
+						<div class="main__inform-image">
+							<img class="main__inform-image" src="{{inform.image.url}}" alt="Зображення">
 						</div>
-						<nav>
-							 <ul class="menu">
-								  <li><a href="#">Компанія</a>
-										<ul>
-											 <li><a href="../company/about.html">Про нас</a></li>
-											 <li><a href="#">Документи</a></li>
-											 <li><a href="../company/reviews.html">Відгуки</a></li>
-											 <!-- <li><a href="../company/media.html">ЗМІ</a></li> -->
-										</ul>
-								  </li>
-								  <li><a href="#">Продукція</a>
-										<ul>
-											 <li><a href="../goods/transformers.html">Трансформатори</a></li>
-											 <li><a href="../goods/ktp.html">КТП</a></li>
-										</ul>
-								  </li>
-								  <li><a href="../services/services.html">Послуги</a></li>
-								  <li><a href="../news/news.html">Новини</a></li>
-								  <li><a href="../contacts/contacts.html">Контакти</a></li>
-								  <li><a href="../entrance/entrance.html">Вхід</a></li>
-							 </ul>
-						</nav>
-				  </div>
-				</div>
-			</div>
-			<main class="main">
-				<div class="container">
-					<div class="main__row">
-						<div class="main__inform">
-							<div class="main__inform-title">Останні події</div>
-							<div class="main__inform-body">
-								<div class="main__inform-image">
-									<img class="main__inform-image" src="../img/company/documents/Лабораторія.jpg" alt="Зображення">
-								</div>
-								<div class="main__inform-text">
-									<div class="main__inform-text-title">
-										Співпраця з ПП "ЕНЕРГІЯ-ПРОМСЕРВІС"
-									</div>
-									<div class="main__inform-text-text">
-										<p>Раді повідомити, що наша компанія розпочала співпрацю з електротехнічною лабораторією ПП "ЕНЕРГІЯ-ПРОМСЕРВІС". Завдяки цьому партнерству ми зможемо ще ефективніше забезпечувати високу якість нашої продукції та послуг, гарантуючи надійність і безпеку електротехнічних рішень для наших клієнтів.</p>
-										<p>Разом з ПП "ЕНЕРГІЯ-ПРОМСЕРВІС" ми будемо проводити комплексні випробування і діагностику обладнання, що дозволить підвищити рівень обслуговування та задовольнити найвищі вимоги сучасного ринку.</p>
-									</div>
-									<div class="main__inform-text-deital">
-										<p>Детальніше</p>
-									</div>
-								</div>
+						<div class="main__inform-text">
+							<div class="main__inform-text-title">
+								{{inform.name}}
 							</div>
-						</div>
-						<div class="main__content">
-							<h1>Офіційні документи та свідоцтва</h1>
-							<div class="main__content-documents-items">
-								<div class="main__content-documents-item">
-									<div class="main__content-documents-image">
-										<img src="../img/company/documents/ТМ, ТМГ, ТМЗ.jpg" class="documents-image" alt="Зображення">
-									</div>
-									<div class="main__content-documents-title">ТМ, ТМГ, ТМЗ</div>
-								</div>
-								<div class="main__content-documents-item">
-									<div class="main__content-documents-image">
-										<img src="../img/company/documents/КТП.jpg" alt="Зображення">
-									</div>
-									<div class="main__content-documents-title">Трансформаторні підстанції</div>
-								</div>
-								<div class="main__content-documents-item">
-									<div class="main__content-documents-image">
-										<img src="../img/company/documents/Реквізити.jpg" alt="Зображення">
-									</div>
-									<div class="main__content-documents-title">Реквізити</div>
-								</div>
-								<div class="main__content-documents-item">
-									<div class="main__content-documents-image">
-										<img src="../img/company/documents/Т-1500.jpg" alt="Зображення">
-									</div>
-									<div class="main__content-documents-title">Масло Т-1500</div>
-								</div>
+							<div class="main__inform-text-text">
+								{{inform.description}}
+							</div>
+							<div class="main__inform-text-deital">
+								<p>Детальніше</p>
 							</div>
 						</div>
 					</div>
 				</div>
-			</main>
-		</div>
+				<div class="main__content">
+					<h1>Офіційні документи та свідоцтва</h1>
+					<div class="main__content-documents-items">
+						{% for item in items %}
+							<div class="main__content-documents-item">
+								<div class="main__content-documents-image">
+									<img src="{{item.image.url}}" class="documents-image" alt="Зображення">
+								</div>
+								<div class="main__content-documents-title">{{item.title}}</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				</div>
+			</div>
+		</main>
 
-		<!-- Модальное окно -->
+<!-- Модальное окно -->
 		<div class="modal">
 			<div class="modal-content">
 				<span class="modal-close">&times;</span>
@@ -112,23 +56,20 @@
 		</div>
 		<div class="image-modal">
 			<div class="image-modal-content">
-			  <span class="image-modal-close">&times;</span>
-			  <img src="" alt="Модальное изображение">
+				<span class="image-modal-close">&times;</span>
+				<img src="" alt="Модальное изображение">
 			</div>
-		 </div>
-		<footer class="footer">
-			<div class="container">
-				<p>Запоріжжя</p>
-				<p>2024</p>
-			</div>
-		</footer>
+		</div>
+
 		<script>
-			function toggleMenu() {
-				const menu = document.querySelector('.menu');
-				menu.classList.toggle('active');
-			}
+		function toggleMenu() {
+			const menu = document.querySelector('.menu');
+			menu.classList.toggle('active');
+		}
 		</script>
-		<script src="../js/documents-info.js"></script>
-		<script src="../js/documents-items.js"></script>
+		<script src="{% static "deps/js/documents-info.js" %}"></script>
+		<script src="{% static "deps/js/documents-items.js" %}"></script>
+	{% endblock %}
+		
 </body>
 </html>

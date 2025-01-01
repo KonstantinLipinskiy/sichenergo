@@ -1,3 +1,4 @@
+from email.mime import image
 from django.db import models
 
 class Presentation(models.Model):
@@ -12,3 +13,28 @@ class Presentation(models.Model):
 	class Meta:
 		verbose_name = 'Презентацію'
 		verbose_name_plural = 'Презентація'
+
+#Documents
+class DocumentsInform(models.Model):
+	title = models.CharField(max_length=155, verbose_name='Останні події')
+	image = models.ImageField(upload_to='documents/', verbose_name='Зображення')
+	name = models.CharField(max_length=155, verbose_name='Короткий опис')
+	description = models.TextField(verbose_name='Опис')
+
+	def __str__(self):
+		return self.title
+	
+	class Meta:
+		verbose_name = 'Подію'
+		verbose_name_plural = 'Події (Документи)'
+
+class DocumentsItem(models.Model):
+	title = models.CharField(max_length=155, verbose_name='Найменування')
+	image = models.ImageField(upload_to='documents/', verbose_name='Зображення')
+	
+	def __str__(self):
+		return self.title
+	
+	class Meta:
+		verbose_name = 'Документ'
+		verbose_name_plural = 'Документи'
