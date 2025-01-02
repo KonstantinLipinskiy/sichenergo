@@ -52,7 +52,7 @@ def transformers_yz(request):
 	trans_yz = TransformYZ.objects.all()
 	inform = InformTransform.objects.first()
 	context = {
-		"title": 'ТМЗ',
+		"title": 'Y/Z',
 		"trans_yz": trans_yz,
 		"inform": inform,
 	}
