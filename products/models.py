@@ -25,7 +25,7 @@ class InformTransform(models.Model):
 	
 	class Meta:
 		verbose_name = "Опитувальний лист"
-		verbose_name_plural = "Опитувальні листи"
+		verbose_name_plural = "Трансформатор - Опитувальні листи"
 	
 class TransformTm(models.Model):
 	name = models.CharField(max_length=255, verbose_name='Потужність трансформаторів ТМ та ТМЖ')
@@ -86,4 +86,4 @@ class InformKTP(models.Model):
 	
 	class Meta:
 		verbose_name = "Опитувальний лист"
-		verbose_name_plural = "Опитувальні листи"
+		verbose_name_plural = "КТП - Опитувальні листи"

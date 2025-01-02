@@ -8,10 +8,9 @@ def transformers(request):
 	series = TransformItem.objects.all()
 	inform = InformTransform.objects.first()
 	context = {
-		"title" : "Cилові масляні трансформатори з класами напруги до 35 кВ та потужністю до 2500 кВА (ТМ, ТМГ, ТМЗ, ТМЖГ)",
+		"title" : "Трансформатори",
 		"series": series,
 		"inform": inform,
-		"page": 'Трансформатори',
 	}
 
 	return render(request, "products/transformers.html", context)
