@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Presentation, DocumentsItem, DocumentsInform
+from .models import Presentation, DocumentsItem, DocumentsInform, ReviewsInfo, ReviewsItem
 
 
 def company(request):
@@ -26,3 +26,15 @@ def documents(request):
 	}
 
 	return render(request, 'company/documents.html', context)
+
+
+def reviews(request):
+	items = ReviewsItem.objects.all()
+	inform = ReviewsInfo.objects.first()
+	context = {
+		"title": 'Відгуки',
+		"items": items,
+		"inform": inform,
+	}
+
+	return render(request, 'company/reviews.html', context)

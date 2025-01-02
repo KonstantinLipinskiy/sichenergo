@@ -183,7 +183,7 @@ h1{
 
 .main__content-reviews-items {
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 }
