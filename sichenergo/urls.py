@@ -19,6 +19,7 @@ from argparse import Namespace
 from django.contrib import admin
 from django.urls import path, include
 
+import contacts
 import products
 from sichenergo import settings
 from django.conf.urls.static import static
@@ -31,6 +32,7 @@ urlpatterns = [
 	 path('products/', include('products.urls', namespace='products')),
 	 path('service/', include('service.urls', namespace='service')),
 	 path('company/', include('company.urls', namespace='company')),
+	 path('contacts/', include('contacts.urls', namespace='contacts')),
 ]
 
 if settings.DEBUG:
