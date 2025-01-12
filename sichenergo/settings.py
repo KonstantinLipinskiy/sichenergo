@@ -88,15 +88,21 @@ WSGI_APPLICATION = 'sichenergo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'sichenergo',
+# 		  'USER': 'sichenergo',
+# 		  'PASSWORD': 'sichenergo',
+# 		  'HOST': 'localhost',
+# 		  'PORT': '5432',
+# 		}
+# }
+
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sichenergo',
-		  'USER': 'sichenergo',
-		  'PASSWORD': 'sichenergo',
-		  'HOST': 'localhost',
-		  'PORT': '5432',
-		}
+    'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
 }
 
 
