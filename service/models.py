@@ -10,5 +10,5 @@ class ServiceInform(models.Model):
 		return self.name
 	
 	class Meta:
-		verbose_name = "Подія"
-		verbose_name_plural = "Події"
+		verbose_name = 'Подія'
+		verbose_name_plural = 'Події'

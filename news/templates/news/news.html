@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block css %}
-	<link rel="stylesheet" href="{% static "deps/css/news/news.css" %}">
+	<link rel="stylesheet" href="{% static 'deps/css/news/news.css' %}">
 {% endblock  %}
 <title>{{context}}</title>
 <body>
@@ -31,7 +31,7 @@
 										<div class="main__news-item-region">Регіон {{ news_item.region }}</div>
 										<div class="main__news-item-name">{{ news_item.title }}</div>
 										<div class="main__news-item-heading">Рубрика "{{ news_item.heading }}"</div>
-										{% comment %} {{news_item.created_at}} {% endcomment %}
+										{{ news_item.created_at|date:"d.m.Y" }}
 									</div>
 								{% endfor %}
 							</div>

@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block css %}
-	<link rel="stylesheet" href="{% static "deps/css/goods/transform.css" %}">
+	<link rel="stylesheet" href="{% static 'deps/css/goods/transform.css' %}">
 {% endblock %}
 
 <title>{{context}}</title>
@@ -33,19 +33,27 @@
 					<h1>Cилові масляні трансформатори з класами напруги до 35 кВ та потужністю до 2500 кВА (ТМ, ТМГ, ТМЗ, ТМЖГ)</h1>
 					<div class="main__content-items">
 						{% for item in series %}
-							<a href="item.detail_url" class="trans-series">
-								<div class="main__content-item">
-									<div class="main__conten-item-image">
-										<img src="{{item.image.url}}" alt="{{item.name}}">
+							{% if item.name == 'Трансформатори серії ТМ та ТМЖ' %}
+								<a href="{% url 'products:tm' %}" class="trans-series">
+							{% elif item.name == 'Трансформатори серії ТМГ та ТМЖГ' %}
+								<a href="{% url 'products:tmg' %}" class="trans-series">
+							{% elif item.name == 'Трансформатори серії ТМЗ' %}
+								<a href="{% url 'products:tmz' %}" class="trans-series">
+							{% elif item.name == 'Трансформатори серії ТМГ Y/Z' %}
+								<a href="{% url 'products:yz' %}" class="trans-series">
+							{% endif %}
+									<div class="main__content-item">
+										<div class="main__conten-item-image">
+											<img src="{{item.image.url}}" alt="{{item.name}}">
+										</div>
+										<div class="main__content-item-sries">
+											<h3>{{item.name}}</h3>
+										</div>
+										<div class="main__content-item-detail">
+											<h4>Детальніше</h4>
+										</div>
 									</div>
-									<div class="main__content-item-sries">
-										<h3>{{item.name}}</h3>
-									</div>
-									<div class="main__content-item-detail">
-										<h4>Детальніше</h4>
-									</div>
-								</div>
-							</a>
+								</a>
 						{% endfor %}
 					</div>
 				</div>

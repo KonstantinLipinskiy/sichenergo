@@ -66,3 +66,4 @@ class ReviewsItem(models.Model):
 	class Meta:
 		verbose_name = 'Відгук'
 		verbose_name_plural = 'Відгуки'
+		ordering = ['-id']

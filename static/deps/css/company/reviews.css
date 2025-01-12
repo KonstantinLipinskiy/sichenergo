@@ -194,7 +194,7 @@ h1{
 
 .main__content-reviews-item {
 	border: 1px solid #000;
-	width: 30%;
+	width: 28%;
 	padding: 10px;
 	margin: 20px;
 	background-color: #fff;
@@ -330,6 +330,6 @@ h1{
 
 @media(max-width: 464px){
 	h1{
-		font-size: 20px;
+		font-size: 24px;
 	}
 }

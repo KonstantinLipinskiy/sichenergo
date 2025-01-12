@@ -1,0 +1,38 @@
+[
+	{
+		"model": "products.transformitem",
+		"pk": 1,
+		"fields": {
+			"name": "Трансформатори серії ТМ та ТМЖ",
+			"image": "media/tm_fDjIv3Z.jpg",
+			"detail_url": null
+		}
+	},
+	{
+		"model": "products.transformitem",
+		"pk": 2,
+		"fields": {
+			"name": "Трансформатори серії ТМГ та ТМЖГ",
+			"image": "media/tmg_Pwvje9t.jpg",
+			"detail_url": null
+		}
+	},
+	{
+		"model": "products.transformitem",
+		"pk": 3,
+		"fields": {
+			"name": "Трансформатори серії ТМЗ",
+			"image": "media/tmz_3LGONok.jpg",
+			"detail_url": null
+		}
+	},
+	{
+		"model": "products.transformitem",
+		"pk": 4,
+		"fields": {
+			"name": "Трансформатори серії ТМГ Y/Z",
+			"image": "media/yz_DDLDrpQ.jpg",
+			"detail_url": null
+		}
+	}
+]

@@ -1,0 +1,34 @@
+[
+	{
+		"model": "company.documentsitem",
+		"pk": 1,
+		"fields": {
+			"title": "ТМ, ТМГ, ТМЗ",
+			"image": "documents/ТМ_ТМГ_ТМЗ_6OEDXD4.jpg"
+		}
+	},
+	{
+		"model": "company.documentsitem",
+		"pk": 2,
+		"fields": {
+			"title": "Трансформаторні підстанції",
+			"image": "documents/КТП_B0eQn0Y.jpg"
+		}
+	},
+	{
+		"model": "company.documentsitem",
+		"pk": 3,
+		"fields": {
+			"title": "Реквізити",
+			"image": "documents/Реквізити_qjF5gHz.jpg"
+		}
+	},
+	{
+		"model": "company.documentsitem",
+		"pk": 4,
+		"fields": {
+			"title": "Масло Т-1500",
+			"image": "documents/Т-1500_mTQMvjH.jpg"
+		}
+	}
+]

@@ -1,0 +1,74 @@
+[
+	{
+		"model": "products.transformtm",
+		"pk": 1,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМ-25-63/10 У1",
+			"image": "img_tm/1._ТМ-25-6310_У1_GReNy9T.jpg",
+			"file_tm": "drawing_tm/ТМ-25-63_У1_8V7zjFA.pdf"
+		}
+	},
+	{
+		"model": "products.transformtm",
+		"pk": 2,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМ-100-160/10 У1",
+			"image": "img_tm/2._ТМ-100-16010_У1_Bz67yyu.jpg",
+			"file_tm": "drawing_tm/ТМ-100-160_У1_HOCmDGZ.pdf"
+		}
+	},
+	{
+		"model": "products.transformtm",
+		"pk": 3,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМ-250-1250/10 У1",
+			"image": "img_tm/3._ТМ-250-125010_У1_tWsjFxb.jpg",
+			"file_tm": "drawing_tm/ТМ-250-1250_У1_yLr6Jqz.pdf"
+		}
+	},
+	{
+		"model": "products.transformtm",
+		"pk": 4,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМ-1600-2500/10 У1",
+			"image": "img_tm/4._ТМ-1600-250010_У1_JzSS9zX.jpg",
+			"file_tm": "drawing_tm/ТМ-1600-2500_У1_lVPKVRJ.pdf"
+		}
+	},
+	{
+		"model": "products.transformtm",
+		"pk": 5,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМ-25-63/35 та ТМЖ-25-63/27,5 У1",
+			"image": "img_tm/5._ТМ-25-6335_та_ТМЖ-25-6327.5_NwocSyz.jpg",
+			"file_tm": "drawing_tm/ТМ-25-6335_та_ТМЖ-25-63275_У1_TFpK7wP.pdf"
+		}
+	},
+	{
+		"model": "products.transformtm",
+		"pk": 6,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМ-100-250/35 та ТМЖ-100-250/27,5 У1",
+			"image": "img_tm/6._ТМ-100-25035_та_ТМЖ-100-25027.5_hWDnHCh.jpg",
+			"file_tm": "drawing_tm/ТМ-100-25035_та_ТМЖ-100-250275_У1_ZDTH2N9.pdf"
+		}
+	},
+	{
+		"model": "products.transformtm",
+		"pk": 7,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМ-400-1250/35 та ТМЖ-400-1250/27,5 У1",
+			"image": "img_tm/7._ТМ-400-125035_та_ТМЖ-400-125027.5_sLvJsgU.jpg",
+			"file_tm": "drawing_tm/ТМ-400-1250_35_У1_ТМЖ-400-125027.5_У1_aHP6EQK.pdf"
+		}
+	},
+	{
+		"model": "products.transformtm",
+		"pk": 8,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМ-1600-2500/35 та ТМЖ-1600-2500/27,5 У1",
+			"image": "img_tm/8._ТМ-1600-2500_35_У1_ТМЖ-1600-250027.5_У1_81QzhRt.jpg",
+			"file_tm": "drawing_tm/ТМ-1600-2500_35_У1_ТМЖ-1600-250027.5_У1_wOg9koh.pdf"
+		}
+	}
+]

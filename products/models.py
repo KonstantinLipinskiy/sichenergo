@@ -16,7 +16,7 @@ class TransformItem(models.Model):
 
 class InformTransform(models.Model):
 	title = models.CharField(max_length=150, verbose_name='Трансформатор (опитовий лист)')
-	video = models.FileField(upload_to='video/', verbose_name="Відео", blank=True, null=True)
+	video = models.FileField(upload_to='video/', verbose_name='Відео', blank=True, null=True)
 	description = models.TextField(verbose_name='Опис', blank=True)
 	file_ol = models.FileField(upload_to='ol/', verbose_name="Файл для скачування")
 
@@ -36,8 +36,8 @@ class TransformTm(models.Model):
 		return self.name
 	
 	class Meta:
-		verbose_name = "Трансформатор ТМ та ТМЖ"
-		verbose_name_plural = "Трансформатори ТМ та ТМЖ"
+		verbose_name = 'Трансформатор ТМ та ТМЖ'
+		verbose_name_plural = 'Трансформатори ТМ та ТМЖ'
 
 class TransformTmg(models.Model):
 	name = models.CharField(max_length=255, verbose_name='Потужність трансформаторів ТМГ та ТМЖГ')
@@ -48,8 +48,8 @@ class TransformTmg(models.Model):
 		return self.name
 	
 	class Meta:
-		verbose_name = "Трансформатор ТМГ та ТМЖГ"
-		verbose_name_plural = "Трансформатори ТМГ та ТМЖГ"
+		verbose_name = 'Трансформатор ТМГ та ТМЖГ'
+		verbose_name_plural = 'Трансформатори ТМГ та ТМЖГ'
 
 class TransformTmz(models.Model):
 	name = models.CharField(max_length=255, verbose_name='Трансформатори ТМЗ')
@@ -60,8 +60,8 @@ class TransformTmz(models.Model):
 		return self.name
 	
 	class Meta:
-		verbose_name = "Трансформатор ТМЗ"
-		verbose_name_plural = "Трансформатори ТМЗ"
+		verbose_name = 'Трансформатор ТМЗ'
+		verbose_name_plural = 'Трансформатори ТМЗ'
 
 class TransformYZ(models.Model):
 	name = models.CharField(max_length=255, verbose_name='Трансформатори серії Y/Z')
@@ -72,12 +72,12 @@ class TransformYZ(models.Model):
 		return self.name
 	
 	class Meta:
-		verbose_name = "Трансформатор Y/Z"
-		verbose_name_plural = "Трансформатори Y/Z"
+		verbose_name = 'Трансформатор Y/Z'
+		verbose_name_plural = 'Трансформатори Y/Z'
 
 class InformKTP(models.Model):
 	title = models.CharField(max_length=150, verbose_name='КТП (опитовий лист)')
-	video = models.FileField(upload_to='video/', verbose_name="Відео", blank=True, null=True)
+	video = models.FileField(upload_to='video/', verbose_name='Відео', blank=True, null=True)
 	description = models.TextField(verbose_name='Опис', blank=True)
 	file_ol = models.FileField(upload_to='ol/', verbose_name="Файл для скачування")
 
@@ -85,5 +85,5 @@ class InformKTP(models.Model):
 		return self.title
 	
 	class Meta:
-		verbose_name = "Опитувальний лист"
-		verbose_name_plural = "КТП - Опитувальні листи"
+		verbose_name = 'Опитувальний лист'
+		verbose_name_plural = 'КТП - Опитувальні листи'

@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block css %}
-	<link rel="stylesheet" href="{% static "deps/css/company/documents.css" %}">
+	<link rel="stylesheet" href="{% static 'deps/css/company/documents.css' %}">
 {% endblock %}
 	<title>{{context}}</title>
 <body>
@@ -67,8 +67,8 @@
 			menu.classList.toggle('active');
 		}
 		</script>
-		<script src="{% static "deps/js/documents-info.js" %}"></script>
-		<script src="{% static "deps/js/documents-items.js" %}"></script>
+		<script src="{% static 'deps/js/documents-info.js' %}"></script>
+		<script src="{% static 'deps/js/documents-items.js' %}"></script>
 	{% endblock %}
 		
 </body>

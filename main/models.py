@@ -10,8 +10,8 @@ class MainInfo(models.Model):
 		return self.title
 	
 	class Meta:
-		verbose_name = "Інформацію"
-		verbose_name_plural = "Інформація"
+		verbose_name = 'Інформацію'
+		verbose_name_plural = 'Інформація'
 
 class MainItem(models.Model):
 	title = models.CharField(max_length=155, verbose_name='Головна Назва блоку')
@@ -22,5 +22,5 @@ class MainItem(models.Model):
 		return self.title
 	
 	class Meta:
-		verbose_name = "Блок"
-		verbose_name_plural = "Блок"
+		verbose_name = 'Блок'
+		verbose_name_plural = 'Блок'

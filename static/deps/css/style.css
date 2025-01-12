@@ -204,7 +204,7 @@ h1{
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 	transform: scale(1.04);
 	font-weight: 600;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .main__content-index-item:active{
@@ -320,6 +320,7 @@ h1{
 
 	.main__content-index-item{
 		padding: 10px;
+		font-size: 16px;
 	}
 
 	.index-link{
@@ -329,6 +330,8 @@ h1{
 
 	.main__content-index-title {
 		font-size: 16px;
+		font-weight: 535;
+		letter-spacing: 1px;
 	}
 
 	.main__content-index-items > .index-link .main__content-index-title {

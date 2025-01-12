@@ -1,0 +1,12 @@
+[
+	{
+		"model": "products.informtransform",
+		"pk": 1,
+		"fields": {
+			"title": "Опитовий лист",
+			"video": "video/transform_SuFC1BP.mp4",
+			"description": "Опитовий лист для замовлення трансформатору ТМ, ТМГ, ТМЗ та ТМЖГ",
+			"file_ol": "ol/ОЛ_ТМГ_eOEkYTa.doc"
+		}
+	}
+]

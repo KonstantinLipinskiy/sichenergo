@@ -1,0 +1,13 @@
+[
+	{
+		"model": "contacts.contacts",
+		"pk": 1,
+		"fields": {
+			"telephone": "098 898-94-17",
+			"e_mail": "tovsichenergo@gmail.com",
+			"image": "contacts/изображение_viber_2024-11-13_00-45-49-074_WbJbYI6.jpg",
+			"details": "<p>Адреса: 69006, м. Запоріжжя, площа Запорізька, 1-Б</p>\r\n\t\t\t\t\t\t<p>Код за ЄДРПОУ: 34500945</p>\r\n\t\t\t\t\t\t<p>IBAN UA: 853133990000026000020200225 </p>\r\n\t\t\t\t\t\t<p>в АТ КБ «ПРИВАТБАНК» м. Запоріжжя</p>\r\n\t\t\t\t\t\t<p>МФО 305299</p>",
+			"name": "1"
+		}
+	}
+]

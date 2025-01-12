@@ -1,0 +1,56 @@
+[
+	{
+		"model": "products.transformyz",
+		"pk": 1,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМ-25-63/10 У1 Y/Zн-11",
+			"image": "img_yz/1._ТМ-25-63_YZн-11_89hn7zJ.jpg",
+			"file_yz": "drawing_yz/1._ТМ-25-6310_У1_YZн-11_9ZP0tkP.pdf"
+		}
+	},
+	{
+		"model": "products.transformyz",
+		"pk": 2,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМ-100-160/10 У1 Y/Zн-11",
+			"image": "img_yz/2._ТМ-100-160_YZн-11_dqZ6Jza.jpg",
+			"file_yz": "drawing_yz/2._ТМ-100-16010_У1_YZн-11_PBE3ZVL.pdf"
+		}
+	},
+	{
+		"model": "products.transformyz",
+		"pk": 3,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМ-250/10 У1 Y/Zн-11",
+			"image": "img_yz/3._ТМ-250_YZн-11_jjWTB6v.jpg",
+			"file_yz": "drawing_yz/3._ТМ-25010_У1_YZн-11_fWf9yPS.pdf"
+		}
+	},
+	{
+		"model": "products.transformyz",
+		"pk": 4,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМГ-25-63/10 У1 Y/Zн-11",
+			"image": "img_yz/4._ТМГ-25-63_YZн-11_UhpWPgw.jpg",
+			"file_yz": "drawing_yz/4._ТМГ-25-6310_У1_YZн-11_5oe12u1.pdf"
+		}
+	},
+	{
+		"model": "products.transformyz",
+		"pk": 5,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМГ-100-160/10 У1 Y/Zн-11",
+			"image": "img_yz/5._ТМГ-100-160_YZн-11_JF5mZNJ.jpg",
+			"file_yz": "drawing_yz/5._ТМГ-100-16010_У1_YZн-11_mweZA6l.pdf"
+		}
+	},
+	{
+		"model": "products.transformyz",
+		"pk": 6,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМГ-250/10 У1 Y/Zн-11",
+			"image": "img_yz/6._ТМГ-250_YZн-11_Gb8f24A.jpg",
+			"file_yz": "drawing_yz/6._ТМГ-25010_У1_YZн-11_zGCrSz0.pdf"
+		}
+	}
+]

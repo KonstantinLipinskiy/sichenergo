@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block css %}
-	<link rel="stylesheet" href="{% static "deps/css/contacts/contacts.css" %}">
+	<link rel="stylesheet" href="{% static 'deps/css/contacts/contacts.css' %}">
 {% endblock  %}
 
 <title>К{{context}}</title>
@@ -36,9 +36,9 @@
 								<h2>Відділ продажу</h2>
 								<p>тел. {{contact.telephone}}</p>
 									<div class="messenger">
-										<img src="{% static "deps/img/contacts/free-icon-viber-3670059.png" %}" alt="">
-										<img src="{% static "deps/img/contacts/free-icon-telegram-2111646.png" %}" alt="">
-										<img src="{% static "deps/img/contacts/free-icon-whatsapp-4494494.png" %}" alt="">
+										<img src="{% static 'deps/img/contacts/free-icon-viber-3670059.png' %}" alt="">
+										<img src="{% static 'deps/img/contacts/free-icon-telegram-2111646.png' %}" alt="">
+										<img src="{% static 'deps/img/contacts/free-icon-whatsapp-4494494.png' %}" alt="">
 									</div>
 							</div>
 							<div class="e-mail">
@@ -47,13 +47,13 @@
 							<h2>Соціальні мережі</h2>
 							<div class="social__networks">
 								<a href="https://www.instagram.com/sichenergy_zp/?locale=ru" target="_blank">
-									<img src="{% static "deps/img/contacts/free-icon-instagram-4494488.png" %}" alt="">
+									<img src="{% static 'deps/img/contacts/free-icon-instagram-4494488.png' %}" alt="">
 								</a>
-								<a href="#" target="_blank">
-									<img src="{% static "deps/img/contacts/free-icon-facebook-4494475.png" %}" alt="">
+								<a href="https://www.facebook.com/tov.vtk.sic.energo" target="_blank">
+									<img src="{% static 'deps/img/contacts/free-icon-facebook-4494475.png' %}" alt="">
 								</a>
-								<a href="#" target="">
-									<img src="{% static "deps/img/contacts/free-icon-twitter-5969020.png" %}" alt="">
+								<a href="https://x.com/sichenergo" target="_blank">
+									<img src="{% static 'deps/img/contacts/free-icon-twitter-5969020.png' %}" alt="">
 								</a>
 							</div>	
 						</div>

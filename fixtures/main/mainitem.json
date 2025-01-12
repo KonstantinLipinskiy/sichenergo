@@ -1,0 +1,29 @@
+[
+	{
+		"model": "main.mainitem",
+		"pk": 1,
+		"fields": {
+			"title": "Трансформатори",
+			"video": "main/main_index_transvormator_xbxE0ko.mp4",
+			"detail_url": null
+		}
+	},
+	{
+		"model": "main.mainitem",
+		"pk": 2,
+		"fields": {
+			"title": "Трансформаторні підстанції",
+			"video": "main/main_index_ktp_4q7XKzK.mp4",
+			"detail_url": null
+		}
+	},
+	{
+		"model": "main.mainitem",
+		"pk": 3,
+		"fields": {
+			"title": "Послуги",
+			"video": "main/main_index_poslugi_B0RAjuO.mp4",
+			"detail_url": null
+		}
+	}
+]

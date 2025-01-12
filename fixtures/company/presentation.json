@@ -1,0 +1,12 @@
+[
+	{
+		"model": "company.presentation",
+		"pk": 1,
+		"fields": {
+			"title": "Презентація",
+			"image": "present/Present_yFaf81H.jpg",
+			"description": "Коротка презентація нашої компанії",
+			"file_present": "ol/Презентація_СЕ.pdf"
+		}
+	}
+]

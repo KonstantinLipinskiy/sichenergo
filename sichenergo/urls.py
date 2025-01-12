@@ -33,6 +33,7 @@ urlpatterns = [
 	 path('service/', include('service.urls', namespace='service')),
 	 path('company/', include('company.urls', namespace='company')),
 	 path('contacts/', include('contacts.urls', namespace='contacts')),
+	 path('entrance/', include('entrance.urls', namespace='entrance')),
 ]
 
 if settings.DEBUG:

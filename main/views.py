@@ -9,9 +9,9 @@ def index(request):
 	info = MainInfo.objects.first()
 
 	context = {
-		"title": "Головна",
-		"items": items,
-		"info": info,
+		'title': 'Головна',
+		'items': items,
+		'info': info,
 		}
 
-	return render(request, "main/index.html", context)
+	return render(request, 'main/index.html', context)

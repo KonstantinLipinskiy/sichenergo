@@ -1,0 +1,20 @@
+[
+	{
+		"model": "products.transformtmz",
+		"pk": 1,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМЗ-630-2500/10 У1 (лівий)",
+			"image": "img_tmz/Лівий_LvbOov0.jpg",
+			"file_tmz": "drawing_tmz/ТМЗ-630-250010_У1_лівий_PxVpUSV.pdf"
+		}
+	},
+	{
+		"model": "products.transformtmz",
+		"pk": 2,
+		"fields": {
+			"name": "Габаритні, приєднувальні розміри і маса трансформаторів ТМЗ-630-2500/10 У1 (правий)",
+			"image": "img_tmz/Правий_0Z5bV8Y.jpg",
+			"file_tmz": "drawing_tmz/ТМЗ-630-250010_У1_правий_6zdh2Wu.pdf"
+		}
+	}
+]

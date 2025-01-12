@@ -1,0 +1,12 @@
+[
+	{
+		"model": "products.informktp",
+		"pk": 1,
+		"fields": {
+			"title": "Опитовий лист",
+			"video": "video/ktp_VYeiwOJ.mp4",
+			"description": "Опитовий лист для замовлення трансформаторної підстанції",
+			"file_ol": "ol/ОЛ_КТП_CAgyW13.doc"
+		}
+	}
+]
