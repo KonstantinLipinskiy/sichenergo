@@ -60,6 +60,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 	 'debug_toolbar.middleware.DebugToolbarMiddleware',
+
+	 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'sichenergo.urls'
@@ -134,9 +136,15 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+import os
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATICFILES_DIRS=[
 	BASE_DIR / 'static'
 	]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = 'media/'
 
