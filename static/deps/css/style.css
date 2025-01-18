@@ -189,7 +189,7 @@ h1{
 }
 
 .index-link{
-	width: 25%;
+	width: 28%;
 	
 }
 
@@ -222,7 +222,7 @@ h1{
 .main__content-index-video img{
 	width: 100%;
 	height: 400px; /* Увеличенная высота для всех картинок */
-	object-fit: cover; /* Картинка будет обрезана по необходимости, чтобы соответствовать пропорциям */
+	object-fit: cover;
 	margin-bottom: 10px;
 }
 
