@@ -189,7 +189,8 @@ h1{
 }
 
 .index-link{
-	width: 28%;
+	width: 25%;
+	
 }
 
 .main__content-index-item{
@@ -198,6 +199,7 @@ h1{
 	background-color: #fff;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 	transition: all 0.3s ease;
+	margin: 13px 10px;
 }
 
 .main__content-index-item:hover{
@@ -217,9 +219,11 @@ h1{
 	margin-bottom: 10px;
 }
 
-.main__content-index-video video{
+.main__content-index-video img{
 	width: 100%;
-	height: auto;
+	height: 400px; /* Увеличенная высота для всех картинок */
+	object-fit: cover; /* Картинка будет обрезана по необходимости, чтобы соответствовать пропорциям */
+	margin-bottom: 10px;
 }
 
 .main__content-index-title {
@@ -311,7 +315,7 @@ h1{
 
 @media(max-width: 632px){
 	h1{
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
 
 	.main__content-index-items {

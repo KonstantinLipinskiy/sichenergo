@@ -7,4 +7,4 @@ class MainInfoAdmin(admin.ModelAdmin):
 
 @admin.register(MainItem)
 class MainItemAdmin(admin.ModelAdmin):
-	list_display = ('title', 'video', 'detail_url')
+	list_display = ('title', 'image', 'detail_url')

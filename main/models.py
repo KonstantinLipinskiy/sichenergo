@@ -15,7 +15,7 @@ class MainInfo(models.Model):
 
 class MainItem(models.Model):
 	title = models.CharField(max_length=155, verbose_name='Головна Назва блоку')
-	video = models.FileField(upload_to='main/', verbose_name='Відео')
+	image = models.ImageField(upload_to='main/', verbose_name='Зображення')
 	detail_url = models.URLField(blank=True, null=True, verbose_name='Посилання')
 
 	def __str__(self):

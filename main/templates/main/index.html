@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block css %}
-	<link rel="stylesheet" href="{% static "deps/css/style.css" %}">
+	<link rel="stylesheet" href='{% static "deps/css/style.css" %}'>
 {% endblock css %}
 {% block title %}
 	{{context}}
@@ -47,7 +47,7 @@
 								{% endif %}
 										<div class="main__content-index-item">
 											<div class="main__content-index-video">
-												<video autoplay muted loop playsinlin src="{{item.video.url}}">Продукція</video>
+												<img src="{{item.image.url}}">Продукція</img>
 											</div>
 											<div class="main__content-index-title">{{item.title}}</div>
 										</div>
@@ -75,7 +75,7 @@
 				menu.classList.toggle('active');
 			}
 		</script>
-		<script src="{% static "deps/js/news-index.js" %}"></script>
+		<script src='{% static "deps/js/news-index.js" %}'></script>
 	{% endblock main %}
 </body>
 </html>
