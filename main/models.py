@@ -18,7 +18,9 @@ class MainInfo(models.Model):
 class MainItem(models.Model):
     title = models.CharField(max_length=155, verbose_name="Головна Назва блоку")
     image = models.ImageField(
-        upload_to="main/", null=True, blank=True, verbose_name="Зображення"
+        upload_to="main/",
+        default="static\deps\img\trans.png",
+        verbose_name="Зображення",
     )
     detail_url = models.URLField(blank=True, null=True, verbose_name="Посилання")
 
