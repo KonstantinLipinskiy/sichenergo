@@ -1,5 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
+from cloudinary_storage.storage import RawMediaCloudinaryStorage
 
 
 class TransformItem(models.Model):
@@ -22,7 +23,7 @@ class InformTransform(models.Model):
     title = models.CharField(
         max_length=150, verbose_name="Трансформатор (опитовий лист)"
     )
-    video = CloudinaryField(blank=True, null=True, verbose_name="Відео")
+    video =  models.FileField(upload_to='videos/', blank=True, null=True, storage=RawMediaCloudinaryStorage())
     description = models.TextField(verbose_name="Опис", blank=True)
     file_ol = models.FileField(upload_to="ol/", verbose_name="Файл для скачування")
 
