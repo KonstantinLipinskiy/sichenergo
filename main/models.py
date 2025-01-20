@@ -1,9 +1,10 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 
 class MainInfo(models.Model):
     title = models.CharField(max_length=155, verbose_name="Головна Інформація")
-    image = models.ImageField(upload_to="main/", verbose_name="Зображення")
+    image = CloudinaryField(verbose_name="Зображення")
     name = models.CharField(max_length=155, verbose_name="Короткий опис")
     description = models.TextField(verbose_name="Опис")
 
@@ -17,10 +18,7 @@ class MainInfo(models.Model):
 
 class MainItem(models.Model):
     title = models.CharField(max_length=155, verbose_name="Головна Назва блоку")
-    image = models.ImageField(
-        upload_to="main/",
-        default="static\deps\img\trans.png",
-        verbose_name="Зображення",
+    image = CloudinaryField(default="static/deps/img/trans.png", verbose_name="Зображення"
     )
     detail_url = models.URLField(blank=True, null=True, verbose_name="Посилання")
 
