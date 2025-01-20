@@ -1,5 +1,6 @@
-from email.mime import image
 from django.db import models
+from cloudinary.models import CloudinaryField
+from cloudinary_storage.storage import RawMediaCloudinaryStorage
 
 class ContactsLocation(models.Model):
 	title = models.CharField(max_length=155, verbose_name='Геолокація')
@@ -16,7 +17,7 @@ class ContactsLocation(models.Model):
 class Contacts(models.Model):
 	telephone = models.CharField(max_length=155, verbose_name='Телефон')
 	e_mail = models.CharField(max_length=155, verbose_name='e_mail')
-	image = models.ImageField(upload_to='contacts/', verbose_name='Зображення')
+	image = CloudinaryField(default="static/deps/img/trans.png", verbose_name="Зображення")
 	details = models.TextField(max_length=450, verbose_name='Реквізити')
 	name = models.CharField(max_length=155, verbose_name='Контакти')
 
