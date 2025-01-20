@@ -25,7 +25,7 @@ class InformTransform(models.Model):
     )
     video =  models.FileField(upload_to='videos/', blank=True, null=True, storage=RawMediaCloudinaryStorage())
     description = models.TextField(verbose_name="Опис", blank=True)
-    file_ol = models.FileField(upload_to="ol/", verbose_name="Файл для скачування")
+    file_ol = CloudinaryField(resource_type='auto', verbose_name="Файл для скачування" )
 
     def __str__(self):
         return self.title
@@ -39,8 +39,8 @@ class TransformTm(models.Model):
     name = models.CharField(
         max_length=255, verbose_name="Потужність трансформаторів ТМ та ТМЖ"
     )
-    image = models.ImageField(
-        upload_to="img_tm/", verbose_name="Креслення трансформаторів ТМ та ТМЖ"
+    image = CloudinaryField(
+        default="static/deps/img/trans.png", verbose_name="Зображення"
     )
     file_tm = models.FileField(
         upload_to="drawing_tm/",
@@ -59,8 +59,8 @@ class TransformTmg(models.Model):
     name = models.CharField(
         max_length=255, verbose_name="Потужність трансформаторів ТМГ та ТМЖГ"
     )
-    image = models.ImageField(
-        upload_to="img_tmg/", verbose_name="Креслення трансформаторів ТМГ та ТМЖГ"
+    image = CloudinaryField(
+        default="static/deps/img/trans.png", verbose_name="Зображення"
     )
     file_tmg = models.FileField(
         upload_to="drawing_tmg/",
@@ -77,8 +77,8 @@ class TransformTmg(models.Model):
 
 class TransformTmz(models.Model):
     name = models.CharField(max_length=255, verbose_name="Трансформатори ТМЗ")
-    image = models.ImageField(
-        upload_to="img_tmz/", verbose_name="Креслення трансформаторів ТМЗ"
+    image = CloudinaryField(
+        default="static/deps/img/trans.png", verbose_name="Зображення"
     )
     file_tmz = models.FileField(
         upload_to="drawing_tmz/", verbose_name="Скачати креслення трансформаторів ТМЗ"
@@ -94,8 +94,8 @@ class TransformTmz(models.Model):
 
 class TransformYZ(models.Model):
     name = models.CharField(max_length=255, verbose_name="Трансформатори серії Y/Z")
-    image = models.ImageField(
-        upload_to="img_yz/", verbose_name="Креслення трансформаторів Y/Z"
+    image = CloudinaryField(
+        default="static/deps/img/trans.png", verbose_name="Зображення"
     )
     file_yz = models.FileField(
         upload_to="drawing_yz/", verbose_name="Скачати креслення трансформаторів Y/Z"
@@ -111,9 +111,7 @@ class TransformYZ(models.Model):
 
 class InformKTP(models.Model):
     title = models.CharField(max_length=150, verbose_name="КТП (опитовий лист)")
-    video = models.FileField(
-        upload_to="video/", verbose_name="Відео", blank=True, null=True
-    )
+    video =  models.FileField(upload_to='videos/', blank=True, null=True, storage=RawMediaCloudinaryStorage())
     description = models.TextField(verbose_name="Опис", blank=True)
     file_ol = models.FileField(upload_to="ol/", verbose_name="Файл для скачування")
 
