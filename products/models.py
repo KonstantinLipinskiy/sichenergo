@@ -42,10 +42,7 @@ class TransformTm(models.Model):
     image = CloudinaryField(
         default="static/deps/img/trans.png", verbose_name="Зображення"
     )
-    file_tm = models.FileField(
-        upload_to="drawing_tm/",
-        verbose_name="Скачати креслення трансформаторів ТМ та ТМЖ",
-    )
+    file_tm = CloudinaryField(resource_type='auto', verbose_name="Скачати креслення трансформаторів ТМ та ТМЖ" )
 
     def __str__(self):
         return self.name
@@ -62,10 +59,7 @@ class TransformTmg(models.Model):
     image = CloudinaryField(
         default="static/deps/img/trans.png", verbose_name="Зображення"
     )
-    file_tmg = models.FileField(
-        upload_to="drawing_tmg/",
-        verbose_name="Скачати креслення трансформаторів ТМГ та ТМЖГ",
-    )
+    file_tmg = CloudinaryField(resource_type='auto', verbose_name="Скачати креслення трансформаторів ТМГ та ТМЖГ" )
 
     def __str__(self):
         return self.name
@@ -80,9 +74,7 @@ class TransformTmz(models.Model):
     image = CloudinaryField(
         default="static/deps/img/trans.png", verbose_name="Зображення"
     )
-    file_tmz = models.FileField(
-        upload_to="drawing_tmz/", verbose_name="Скачати креслення трансформаторів ТМЗ"
-    )
+    file_tmz = CloudinaryField(resource_type='auto', verbose_name="Скачати креслення трансформаторів ТМЗ" )
 
     def __str__(self):
         return self.name
@@ -97,9 +89,7 @@ class TransformYZ(models.Model):
     image = CloudinaryField(
         default="static/deps/img/trans.png", verbose_name="Зображення"
     )
-    file_yz = models.FileField(
-        upload_to="drawing_yz/", verbose_name="Скачати креслення трансформаторів Y/Z"
-    )
+    file_yz = CloudinaryField(resource_type='auto', verbose_name="Скачати креслення трансформаторів Y/Z" )
 
     def __str__(self):
         return self.name
@@ -113,7 +103,7 @@ class InformKTP(models.Model):
     title = models.CharField(max_length=150, verbose_name="КТП (опитовий лист)")
     video =  models.FileField(upload_to='videos/', blank=True, null=True, storage=RawMediaCloudinaryStorage())
     description = models.TextField(verbose_name="Опис", blank=True)
-    file_ol = models.FileField(upload_to="ol/", verbose_name="Файл для скачування")
+    file_ol = CloudinaryField(resource_type='auto', verbose_name="Файл для скачування" )
 
     def __str__(self):
         return self.title
