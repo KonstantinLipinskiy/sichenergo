@@ -194,7 +194,7 @@ h1{
 
 .main__content-reviews-item {
 	border: 1px solid #000;
-	width: 28%;
+	width: 30%;
 	padding: 10px;
 	margin: 20px;
 	background-color: #fff;
@@ -218,7 +218,7 @@ h1{
 	text-align: center;
 	text-transform: uppercase;
 	margin: 15px;
-	font-size: 18px;
+	font-size: 14px;
 }
 
 .main__content-reviews-text {
