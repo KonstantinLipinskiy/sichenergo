@@ -9,10 +9,8 @@ class NewsItem(models.Model):
 		('image', 'Зображення'),
 		('video', 'Відео'),
 	]
-	content_type = CloudinaryField(
-        default="static/deps/img/trans.png", verbose_name="Зображення"
-    )
-	content_file = models.FileField(upload_to='videos/', blank=True, null=True, storage=RawMediaCloudinaryStorage())
+	content_type = models.CharField( max_length=10, choices=CONTENT_TYPE_CHOICES, verbose_name='Тип контенту' ) # Использование CloudinaryField для загрузки файлов 
+	content_file = CloudinaryField( resource_type='auto', default="static/deps/img/trans.png", verbose_name='Файл контента')
 	region= models.CharField(max_length=255, verbose_name='Регіон')
 	heading= models.CharField(max_length=255, verbose_name='Рубрика')
 	created_at= models.DateTimeField(auto_now_add=True, verbose_name='Дата створення')
